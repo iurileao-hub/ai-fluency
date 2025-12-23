@@ -6,7 +6,7 @@ import { sobreContent } from "@/content/sobre";
 export const metadata: Metadata = {
   title: "Sobre",
   description:
-    "Sobre o curso AI Fluency, o instrutor Dr. Iuri Almeida e a inspiração no Guia do Mochileiro das Galáxias.",
+    "Sobre o curso AI Fluency, o instrutor Dr. Iúri Almeida e a inspiração no Guia do Mochileiro das Galáxias.",
 };
 
 export default function SobrePage() {
