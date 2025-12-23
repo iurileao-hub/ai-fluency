@@ -78,7 +78,7 @@ export const modulos: Modulo[] = [
     citacao:
       "O Babel Fish traduz qualquer idioma instantaneamente. Mas comunicação não é só tradução — é clareza de intenção.",
     citacaoAutor: "Adaptado de Douglas Adams",
-    slidesUrl: null,
+    slidesUrl: "/slides/modulo-2.pdf",
     conceitos: [
       {
         nome: "Product Description",
@@ -120,7 +120,7 @@ export const modulos: Modulo[] = [
     citacao:
       "A Terra foi descrita como 'Mostly Harmless' no Guia — duas palavras que escondiam bilhões de histórias. Informações incompletas podem ser perigosas.",
     citacaoAutor: "Adaptado de Douglas Adams",
-    slidesUrl: null,
+    slidesUrl: "/slides/modulo-3.pdf",
     conceitos: [
       {
         nome: "Product Discernment",
@@ -162,7 +162,7 @@ export const modulos: Modulo[] = [
     citacao:
       "Os golfinhos sabiam algo que os humanos não sabiam. Fluência em IA é desenvolver essa 'percepção' para navegar o futuro da tecnologia.",
     citacaoAutor: "Adaptado de Douglas Adams",
-    slidesUrl: null,
+    slidesUrl: "/slides/modulo-4.pdf",
     conceitos: [
       {
         nome: "Integração dos 4 D's",

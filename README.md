@@ -4,6 +4,8 @@ Site do curso de **Fluência em Inteligência Artificial** usando o Framework 4D
 
 Inspirado em "O Guia do Mochileiro das Galáxias" de Douglas Adams.
 
+**Site:** <https://aifluency.vercel.app>
+
 ## Stack
 
 - **Next.js 16.1** com App Router
@@ -32,10 +34,15 @@ O site roda em http://localhost:3000
 ```
 ai-fluency/
 ├── public/
+│   ├── favicon.svg       # Favicon do site
+│   ├── robots.txt        # Instruções para crawlers
 │   └── slides/           # PDFs dos slides por módulo
 ├── src/
 │   ├── app/              # Páginas (App Router)
 │   │   ├── page.tsx              # Home
+│   │   ├── error.tsx             # Página de erro
+│   │   ├── loading.tsx           # Loading state
+│   │   ├── sitemap.ts            # Sitemap dinâmico
 │   │   ├── framework/            # O Framework 4D
 │   │   ├── modulos/              # Lista e páginas individuais
 │   │   ├── vocabulario/          # Vocabulário de IA
@@ -47,6 +54,7 @@ ai-fluency/
 │   │   └── ui/           # Componentes reutilizáveis
 │   ├── content/          # Conteúdo em TypeScript (markdown strings)
 │   └── lib/              # Utilitários
+├── next.config.ts        # Configuração Next.js + headers de segurança
 └── package.json
 ```
 
@@ -79,6 +87,14 @@ Paleta "Guia do Mochileiro das Galáxias":
 2. **Description** — Como comunicar com a IA?
 3. **Discernment + Diligence** — Como avaliar e usar com responsabilidade?
 4. **Síntese + Aplicação** — Como integrar tudo na prática?
+
+## Deploy
+
+O projeto está hospedado na **Vercel** com deploy automático.
+
+- 100% estático (SSG)
+- Headers de segurança configurados
+- Sitemap dinâmico para SEO
 
 ## Autor
 

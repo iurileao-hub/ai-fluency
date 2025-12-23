@@ -31,6 +31,9 @@ export const metadata: Metadata = {
     "LLM",
   ],
   authors: [{ name: "Dr. Iuri Almeida" }],
+  icons: {
+    icon: "/favicon.svg",
+  },
   openGraph: {
     type: "website",
     locale: "pt_BR",

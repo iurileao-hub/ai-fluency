@@ -1,0 +1,8 @@
+# AI Fluency - Robots.txt
+# https://www.robotstxt.org/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://aifluency.vercel.app/sitemap.xml

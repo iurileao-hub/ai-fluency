@@ -8,6 +8,8 @@ Instruções para Claude Code ao trabalhar neste repositório.
 
 Site do curso **AI Fluency** — um curso de fluência em Inteligência Artificial para profissionais de todas as áreas, usando o Framework 4D (Delegation, Description, Discernment, Diligence).
 
+**URL de Produção:** <https://aifluency.vercel.app>
+
 **Tema visual:** "O Guia do Mochileiro das Galáxias" de Douglas Adams — atmosfera espacial acolhedora, retro-futurista.
 
 **Idioma:** Todo o conteúdo é em **Português (Brasil)**.
@@ -35,6 +37,9 @@ src/
 │   ├── layout.tsx          # Layout principal (Header + Footer)
 │   ├── globals.css         # Tema Tailwind + estilos globais
 │   ├── not-found.tsx       # Página 404
+│   ├── error.tsx           # Página de erro global
+│   ├── loading.tsx         # Loading state durante navegação
+│   ├── sitemap.ts          # Sitemap dinâmico para SEO
 │   ├── framework/          # /framework
 │   ├── modulos/            # /modulos e /modulos/[id]
 │   ├── vocabulario/        # /vocabulario
@@ -62,6 +67,8 @@ src/
 └── lib/                    # Utilitários (vazio por enquanto)
 
 public/
+├── favicon.svg             # Favicon do site
+├── robots.txt              # Instruções para crawlers
 └── slides/                 # PDFs dos slides
     └── modulo-1.pdf
 ```
@@ -169,6 +176,36 @@ npm run lint     # ESLint
 - **Arquivos de conteúdo:** camelCase (ex: `modulo1Content.ts`)
 - **CSS:** Tailwind utilities, evitar CSS custom exceto em `globals.css`
 - **Commits:** Português, presente do indicativo
+
+---
+
+## Segurança e SEO
+
+### Headers de Segurança
+
+Configurados em `next.config.ts`:
+
+- `X-Frame-Options: DENY` — previne clickjacking
+- `X-Content-Type-Options: nosniff` — previne MIME sniffing
+- `Strict-Transport-Security` — força HTTPS
+- `Referrer-Policy` — controla informações de referer
+- `Permissions-Policy` — desabilita câmera, microfone, geolocalização
+
+### SEO
+
+- **Sitemap dinâmico:** `src/app/sitemap.ts` gera `/sitemap.xml` automaticamente
+- **Robots.txt:** `public/robots.txt` com referência ao sitemap
+- **Metadata:** Configurado em `layout.tsx` com Open Graph
+
+---
+
+## Deploy
+
+O projeto está hospedado na **Vercel** com deploy automático a partir da branch `main`.
+
+- **URL:** <https://aifluency.vercel.app>
+- **Build:** `npm run build` (100% estático/SSG)
+- **Tempo de build:** ~2s
 
 ---
 
