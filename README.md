@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Fluency
 
-## Getting Started
+Site do curso de **Fluência em Inteligência Artificial** usando o Framework 4D.
 
-First, run the development server:
+Inspirado em "O Guia do Mochileiro das Galáxias" de Douglas Adams.
+
+## Stack
+
+- **Next.js 16.1** com App Router
+- **Tailwind CSS v4** com `@theme inline`
+- **React 19**
+- **TypeScript**
+- **react-markdown** com remark-gfm
+
+## Desenvolvimento
 
 ```bash
+# Instalar dependências
+npm install
+
+# Rodar servidor de desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build de produção
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O site roda em http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Estrutura do Projeto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+ai-fluency/
+├── public/
+│   └── slides/           # PDFs dos slides por módulo
+├── src/
+│   ├── app/              # Páginas (App Router)
+│   │   ├── page.tsx              # Home
+│   │   ├── framework/            # O Framework 4D
+│   │   ├── modulos/              # Lista e páginas individuais
+│   │   ├── vocabulario/          # Vocabulário de IA
+│   │   ├── recursos/             # Recursos adicionais
+│   │   ├── sobre/                # Sobre o curso
+│   │   └── como-funcionam-llms/  # Como funcionam LLMs
+│   ├── components/
+│   │   ├── layout/       # Header, Footer
+│   │   └── ui/           # Componentes reutilizáveis
+│   ├── content/          # Conteúdo em TypeScript (markdown strings)
+│   └── lib/              # Utilitários
+└── package.json
+```
 
-## Learn More
+## O Framework 4D
 
-To learn more about Next.js, take a look at the following resources:
+O curso ensina 4 competências essenciais para trabalhar com IA:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Competência | Pergunta Central |
+|-------------|------------------|
+| **Delegation** | O que delegar à IA? |
+| **Description** | Como comunicar com a IA? |
+| **Discernment** | Como avaliar outputs? |
+| **Diligence** | Como usar com responsabilidade? |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tema Visual
 
-## Deploy on Vercel
+Paleta "Guia do Mochileiro das Galáxias":
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `space-blue` (#0B1426) — Fundo principal
+- `nebula-blue` (#1E3A5F) — Elementos secundários
+- `guide-yellow` (#F5A623) — Cor de destaque (como a capa do Guia)
+- `star-white` (#F0F4F8) — Texto principal
+- `galaxy-purple` (#6B5B95) — Acentos
+- `towel-green` (#2ECC71) — Sucesso
+- `panic-red` (#E74C3C) — Alertas
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Módulos
+
+1. **Delegation** — O que delegar à IA?
+2. **Description** — Como comunicar com a IA?
+3. **Discernment + Diligence** — Como avaliar e usar com responsabilidade?
+4. **Síntese + Aplicação** — Como integrar tudo na prática?
+
+## Autor
+
+**Dr. Iuri Almeida** — Médico pediatra, oficial médico na PMDF, estudante de Ciência da Computação.
+
+---
+
+*DON'T PANIC* 🐬
