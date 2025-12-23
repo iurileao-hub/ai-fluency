@@ -117,7 +117,7 @@ Usar IA para desenvolver um curso sobre IA não é ironia — é demonstração 
 
 Para dúvidas sobre o curso ou sugestões de melhoria:
 
-**Dr. Iuri Almeida** - [iurileao@gmail.com](mailto:iurileao@gmail.com)
+**Dr. Iúri Almeida** - [iurileao@gmail.com](mailto:iurileao@gmail.com)
 
 ---
 
