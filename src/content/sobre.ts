@@ -51,7 +51,7 @@ Não entre em pânico. Você está no lugar certo.
 
 ## Sobre o Instrutor
 
-**Dr. Iuri Almeida** é médico pediatra com especialização em infectologia pediátrica e mais de 20 anos de experiência clínica. Também é oficial médico, trabalhando em gestão na área de saúde da Polícia Militar do Distrito Federal há mais de 15 anos.
+**Dr. Iúri Almeida** é médico pediatra com especialização em infectologia pediátrica e mais de 20 anos de experiência clínica. Também é oficial médico, trabalhando em gestão na área de saúde da Polícia Militar do Distrito Federal há mais de 15 anos.
 
 Tem interesse na transformação de sistemas de saúde em algo mais racional, humano e sustentável, usando informação, tecnologia, filosofia, educação positiva, IA e um pouco de teimosia organizada.
 
