@@ -184,7 +184,7 @@ export default function Home() {
               Sobre o Instrutor
             </h2>
             <p className="text-star-white/70 leading-relaxed mb-6">
-              <strong className="text-star-white">Dr. Iuri Almeida</strong> é
+              <strong className="text-star-white">Dr. Iúri Almeida</strong> é
               médico pediatra especialista em infectologia pediátrica, oficial médico 
               trabalhando em gestão de saúde na PMDF e estudante de Ciência da Computação.
               Acredita que fluência em IA é uma competência essencial para profissionais
