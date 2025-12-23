@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════════════
+   AI Fluency — Tema "O Guia do Mochileiro das Galáxias"
+   Paleta retro-futurista com atmosfera espacial acolhedora
+   ═══════════════════════════════════════════════════════════════ */
+
+@theme inline {
+  /* Cores principais */
+  --color-space-blue: #0B1426;
+  --color-nebula-blue: #1E3A5F;
+  --color-guide-yellow: #F5A623;
+  --color-star-white: #F0F4F8;
+  --color-galaxy-purple: #6B5B95;
+  --color-towel-green: #2ECC71;
+  --color-panic-red: #E74C3C;
+
+  /* Variações de opacidade para space-blue */
+  --color-space-blue-light: #0B142680;
+  --color-space-blue-dark: #060A13;
+
+  /* Cores semânticas */
+  --color-background: var(--color-space-blue);
+  --color-foreground: var(--color-star-white);
+  --color-primary: var(--color-guide-yellow);
+  --color-secondary: var(--color-galaxy-purple);
+  --color-accent: var(--color-nebula-blue);
+  --color-success: var(--color-towel-green);
+  --color-warning: var(--color-panic-red);
+
+  /* Fontes */
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Estilos Base
+   ═══════════════════════════════════════════════════════════════ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+/* Background com gradiente espacial sutil */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(107, 91, 149, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(30, 58, 95, 0.15) 0%, transparent 50%),
+    var(--color-space-blue);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Tipografia
+   ═══════════════════════════════════════════════════════════════ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-star-white);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+a {
+  color: var(--color-guide-yellow);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Utilitários Customizados
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Borda com brilho amarelo (para cards e destaques) */
+.glow-border {
+  box-shadow: 0 0 20px rgba(245, 166, 35, 0.2);
+}
+
+/* Texto com brilho suave */
+.text-glow {
+  text-shadow: 0 0 10px rgba(245, 166, 35, 0.3);
+}
+
+/* Container padrão */
+.container-guide {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Animação de fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Scrollbar Customizada
+   ═══════════════════════════════════════════════════════════════ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-space-blue-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-nebula-blue);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-galaxy-purple);
+}
