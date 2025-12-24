@@ -5,6 +5,7 @@ export interface Modulo {
   subtitulo: string;
   descricao: string;
   icon: string;
+  image: string;
   referenciaMochileiro: string;
   citacao: string;
   citacaoAutor?: string;
@@ -30,6 +31,7 @@ export const modulos: Modulo[] = [
     descricao:
       "Aprenda a decidir estrategicamente o que humanos devem fazer versus o que a IA pode fazer por você.",
     icon: "🖥️",
+    image: "/images/modules/delegation.png",
     referenciaMochileiro: "Deep Thought",
     citacao:
       "A resposta é 42. Mas qual era a pergunta? Assim como Deep Thought, a IA só pode dar boas respostas se você souber o que perguntar.",
@@ -74,6 +76,7 @@ export const modulos: Modulo[] = [
     descricao:
       "Domine a arte de escrever prompts claros e eficazes para obter os melhores resultados.",
     icon: "🐟",
+    image: "/images/modules/description.png",
     referenciaMochileiro: "Babel Fish",
     citacao:
       "O Babel Fish traduz qualquer idioma instantaneamente. Mas comunicação não é só tradução — é clareza de intenção.",
@@ -116,6 +119,7 @@ export const modulos: Modulo[] = [
     descricao:
       "Desenvolva senso crítico para avaliar outputs da IA e consciência ética para uso responsável.",
     icon: "👁️",
+    image: "/images/modules/discernment.png",
     referenciaMochileiro: "Mostly Harmless",
     citacao:
       "A Terra foi descrita como 'Mostly Harmless' no Guia — duas palavras que escondiam bilhões de histórias. Informações incompletas podem ser perigosas.",
@@ -158,6 +162,7 @@ export const modulos: Modulo[] = [
     descricao:
       "Consolide o aprendizado criando seu plano pessoal de fluência em IA e vislumbre o futuro.",
     icon: "🐬",
+    image: "/images/modules/diligence.png",
     referenciaMochileiro: "So Long, and Thanks for All the Fish",
     citacao:
       "Os golfinhos sabiam algo que os humanos não sabiam. Fluência em IA é desenvolver essa 'percepção' para navegar o futuro da tecnologia.",

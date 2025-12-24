@@ -56,7 +56,7 @@ src/
 │       ├── GuideQuote.tsx        # Citações estilizadas
 │       └── ExerciseBlock.tsx     # Blocos de exercício
 ├── content/                # Conteúdo do curso em TypeScript
-│   ├── modulos.ts          # Metadados dos módulos (título, descrição, slidesUrl)
+│   ├── modulos.ts          # Metadados dos módulos (título, descrição, image, slidesUrl)
 │   ├── modulo1Content.ts   # Conteúdo markdown do Módulo 1
 │   ├── modulo2Content.ts   # Conteúdo markdown do Módulo 2
 │   ├── modulo3Content.ts   # Conteúdo markdown do Módulo 3
@@ -69,9 +69,62 @@ src/
 public/
 ├── favicon.svg             # Favicon do site
 ├── robots.txt              # Instruções para crawlers
-└── slides/                 # PDFs dos slides
-    └── modulo-1.pdf
+├── slides/                 # PDFs dos slides
+│   ├── modulo-1.pdf
+│   ├── modulo-2.pdf
+│   └── modulo-3.pdf
+└── images/                 # Assets visuais
+    ├── hero-background.png # Background do hero section
+    ├── logo.png            # Logo da navbar (128x128)
+    ├── modules/            # Ícones dos 4 módulos (512x512)
+    │   ├── delegation.png
+    │   ├── description.png
+    │   ├── discernment.png
+    │   └── diligence.png
+    └── icons/              # Ícones diversos
+        ├── slides.png      # Ícone de slides (64x64)
+        └── dolphin.png     # Golfinho do footer (64x64)
 ```
+
+---
+
+## Assets Visuais
+
+### Estilo das Imagens
+
+Todas as ilustrações seguem a estética **retro-futurista dos anos 70-80**, inspirada em capas de livros de ficção científica e "O Guia do Mochileiro das Galáxias".
+
+**Características:**
+- Fundo transparente (PNG)
+- Paleta de cores do tema (amarelo dourado, roxo, azul)
+- Estilo vetorial limpo com gradientes suaves
+- Reconhecíveis em tamanhos pequenos
+
+### Uso de Imagens com Next.js
+
+```tsx
+import Image from "next/image";
+
+// Com fill (para containers relativos)
+<div className="relative w-16 h-16">
+  <Image
+    src="/images/modules/delegation.png"
+    alt="Delegation"
+    fill
+    sizes="64px"
+    className="object-contain"
+  />
+</div>
+```
+
+**Importante:** Sempre incluir a prop `sizes` quando usar `fill` para evitar warnings.
+
+### Emojis Mantidos
+
+Alguns emojis foram **intencionalmente mantidos** onde funcionam bem:
+- Componentes UI (AlertBox, GuideQuote, ExerciseBlock)
+- Páginas especiais (404, Error)
+- Listas e categorias em páginas de conteúdo
 
 ---
 
@@ -84,11 +137,11 @@ Definidas em `globals.css` com `@theme inline`:
 ```css
 --color-space-blue: #0B1426;      /* Fundo principal */
 --color-nebula-blue: #1E3A5F;     /* Elementos secundários */
---color-guide-yellow: #F5A623;   /* Destaque (cor do Guia) */
---color-star-white: #F0F4F8;     /* Texto */
---color-galaxy-purple: #6B5B95;  /* Acentos */
---color-towel-green: #2ECC71;    /* Sucesso */
---color-panic-red: #E74C3C;      /* Alertas */
+--color-guide-yellow: #F5A623;    /* Destaque (cor do Guia) */
+--color-star-white: #F0F4F8;      /* Texto */
+--color-galaxy-purple: #6B5B95;   /* Acentos */
+--color-towel-green: #2ECC71;     /* Sucesso */
+--color-panic-red: #E74C3C;       /* Alertas */
 --color-space-blue-dark: #060A13; /* Fundo mais escuro */
 ```
 
@@ -113,8 +166,6 @@ O `MarkdownContent` suporta injeção de componentes React via marcadores HTML:
 ---`
 ```
 
-O componente `MarkdownContent` detecta o marcador e renderiza `FluencyPlanTemplate` no lugar.
-
 ### Conteúdo como Template Literals
 
 O conteúdo dos módulos é armazenado como template literals em TypeScript:
@@ -122,16 +173,9 @@ O conteúdo dos módulos é armazenado como template literals em TypeScript:
 ```typescript
 // src/content/modulo1Content.ts
 export const modulo1Content = `# Módulo 1 — Delegation
-
-## Introdução
 ...
 `;
 ```
-
-Isso permite:
-- Syntax highlighting de markdown no editor
-- Type safety
-- Fácil importação em páginas
 
 ---
 
@@ -143,6 +187,15 @@ Isso permite:
 2. Atualizar `src/content/modulos.ts`:
    ```typescript
    slidesUrl: "/slides/modulo-N.pdf",
+   ```
+
+### Adicionar Nova Imagem de Módulo
+
+1. Gerar imagem 512x512px com fundo transparente
+2. Salvar em `public/images/modules/nome.png`
+3. Atualizar `src/content/modulos.ts`:
+   ```typescript
+   image: "/images/modules/nome.png",
    ```
 
 ### Adicionar Nova Página
@@ -176,6 +229,7 @@ npm run lint     # ESLint
 - **Arquivos de conteúdo:** camelCase (ex: `modulo1Content.ts`)
 - **CSS:** Tailwind utilities, evitar CSS custom exceto em `globals.css`
 - **Commits:** Português, presente do indicativo
+- **Imagens:** PNG com transparência, nomes em kebab-case
 
 ---
 
@@ -206,6 +260,12 @@ O projeto está hospedado na **Vercel** com deploy automático a partir da branc
 - **URL:** <https://aifluency.vercel.app>
 - **Build:** `npm run build` (100% estático/SSG)
 - **Tempo de build:** ~2s
+
+---
+
+## Documentação Adicional
+
+- **DESIGN_IMPROVEMENTS.md** — Histórico de melhorias visuais, prompts usados para gerar imagens, decisões de design
 
 ---
 

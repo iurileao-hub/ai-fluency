@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { MarkdownContent } from "@/components/ui/MarkdownContent";
 import { modulos, getModuloById, getModuloNavigation } from "@/content/modulos";
@@ -60,8 +61,14 @@ export default async function ModuloPage({ params }: PageProps) {
             <span className="text-6xl font-bold text-guide-yellow/30">
               0{modulo.id}
             </span>
-            <div>
-              <span className="text-4xl mb-2 block">{modulo.icon}</span>
+            <div className="relative w-16 h-16">
+              <Image
+                src={modulo.image}
+                alt={modulo.titulo}
+                fill
+                sizes="64px"
+                className="object-contain"
+              />
             </div>
           </div>
         </div>
@@ -69,8 +76,17 @@ export default async function ModuloPage({ params }: PageProps) {
         {/* Slides */}
         <div className="max-w-4xl mx-auto mb-8">
           <div className="bg-nebula-blue/30 border border-nebula-blue/50 rounded-xl p-6">
-            <h2 className="text-xl font-bold text-star-white mb-4 flex items-center gap-2">
-              <span>📊</span> Slides
+            <h2 className="text-xl font-bold text-star-white mb-4 flex items-center gap-3">
+              <div className="relative w-10 h-10">
+                <Image
+                  src="/images/icons/slides.png"
+                  alt=""
+                  fill
+                  sizes="40px"
+                  className="object-contain"
+                />
+              </div>
+              Slides
             </h2>
             {modulo.slidesUrl ? (
               <a

@@ -34,6 +34,7 @@ export default function ModulosPage() {
               subtitle={modulo.subtitulo}
               description={modulo.descricao}
               icon={modulo.icon}
+              image={modulo.image}
               href={`/modulos/${modulo.slug}`}
             />
           ))}

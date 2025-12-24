@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -74,7 +75,15 @@ export function Footer() {
             &copy; {currentYear} AI Fluency. Todos os direitos reservados.
           </p>
           <p className="text-star-white/40 text-xs flex items-center gap-2">
-            <span>🐬</span>
+            <span className="relative w-10 h-10">
+              <Image
+                src="/images/icons/dolphin.png"
+                alt=""
+                fill
+                sizes="40px"
+                className="object-contain"
+              />
+            </span>
             <span>&quot;So long, and thanks for all the fish!&quot;</span>
           </p>
         </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ModuleCard } from "@/components/ui/ModuleCard";
 import { AlertBox } from "@/components/ui/AlertBox";
 import { modulos } from "@/content/modulos";
@@ -7,8 +8,23 @@ export default function Home() {
   return (
     <div className="animate-fade-in">
       {/* Hero Section */}
-      <section className="py-16 md:py-24">
-        <div className="container-guide text-center">
+      <section className="relative min-h-[80vh] flex items-center py-16 md:py-24 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/hero-background.png"
+            alt=""
+            fill
+            className="object-cover object-bottom"
+            priority
+          />
+          {/* Gradient Overlay - garante legibilidade do texto */}
+          <div className="absolute inset-0 bg-gradient-to-b from-space-blue/40 via-space-blue/60 to-space-blue" />
+          {/* Vignette effect nas bordas */}
+          <div className="absolute inset-0 bg-radial-gradient" />
+        </div>
+
+        <div className="container-guide text-center relative z-10">
           {/* Don't Panic Badge */}
           <div className="inline-flex items-center gap-2 bg-guide-yellow/10 border border-guide-yellow/30 rounded-full px-4 py-2 mb-8">
             <span className="text-guide-yellow font-bold text-sm tracking-wider">
@@ -83,32 +99,40 @@ export default function Home() {
                 letter: "D",
                 word: "elegation",
                 desc: "O que delegar?",
-                icon: "🖥️",
+                image: "/images/modules/delegation.png",
               },
               {
                 letter: "D",
                 word: "escription",
                 desc: "Como pedir?",
-                icon: "🐟",
+                image: "/images/modules/description.png",
               },
               {
                 letter: "D",
                 word: "iscernment",
                 desc: "Como avaliar?",
-                icon: "👁️",
+                image: "/images/modules/discernment.png",
               },
               {
                 letter: "D",
                 word: "iligence",
                 desc: "Como usar bem?",
-                icon: "🧭",
+                image: "/images/modules/diligence.png",
               },
             ].map((d, i) => (
               <div
                 key={i}
-                className="text-center p-6 rounded-xl bg-space-blue/50 border border-nebula-blue/50"
+                className="text-center p-6 rounded-xl bg-space-blue/50 border border-nebula-blue/50 hover:border-guide-yellow/30 transition-colors"
               >
-                <span className="text-4xl mb-3 block">{d.icon}</span>
+                <div className="relative w-16 h-16 mx-auto mb-3">
+                  <Image
+                    src={d.image}
+                    alt={`${d.letter}${d.word}`}
+                    fill
+                    sizes="64px"
+                    className="object-contain"
+                  />
+                </div>
                 <p className="text-guide-yellow font-bold text-lg">
                   <span className="text-2xl">{d.letter}</span>
                   {d.word}
@@ -144,6 +168,7 @@ export default function Home() {
                 subtitle={modulo.subtitulo}
                 description={modulo.descricao}
                 icon={modulo.icon}
+                image={modulo.image}
                 href={`/modulos/${modulo.slug}`}
               />
             ))}
@@ -169,7 +194,15 @@ export default function Home() {
               href="/vocabulario"
               className="text-guide-yellow hover:text-guide-yellow/80 transition-colors inline-flex items-center gap-2"
             >
-              <span>🐟</span>
+              <span className="relative w-5 h-5">
+                <Image
+                  src="/images/modules/description.png"
+                  alt=""
+                  fill
+                  sizes="20px"
+                  className="object-contain"
+                />
+              </span>
               <span>Ver Vocabulário Essencial de IA</span>
             </Link>
           </div>

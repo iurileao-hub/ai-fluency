@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { GuideQuote } from "@/components/ui/GuideQuote";
 
 export const metadata: Metadata = {
@@ -15,7 +16,7 @@ const framework = [
     name: "elegation",
     fullName: "Delegation",
     question: "O que delegar à IA?",
-    icon: "🖥️",
+    image: "/images/modules/delegation.png",
     description:
       "A primeira competência é saber decidir estrategicamente o que humanos devem fazer versus o que a IA pode fazer. Não é sobre delegar tudo, mas sobre delegar com sabedoria.",
     subskills: [
@@ -39,7 +40,7 @@ const framework = [
     name: "escription",
     fullName: "Description",
     question: "Como comunicar com a IA?",
-    icon: "🐟",
+    image: "/images/modules/description.png",
     description:
       "A segunda competência é saber se comunicar de forma clara e eficaz com sistemas de IA. Um bom prompt é a diferença entre uma resposta útil e uma inútil.",
     subskills: [
@@ -63,7 +64,7 @@ const framework = [
     name: "iscernment",
     fullName: "Discernment",
     question: "Como avaliar outputs da IA?",
-    icon: "👁️",
+    image: "/images/modules/discernment.png",
     description:
       "A terceira competência é desenvolver senso crítico para avaliar o que a IA produz. Nem tudo que parece correto está correto — e alucinações são comuns.",
     subskills: [
@@ -87,7 +88,7 @@ const framework = [
     name: "iligence",
     fullName: "Diligence",
     question: "Como usar com responsabilidade?",
-    icon: "🧭",
+    image: "/images/modules/diligence.png",
     description:
       "A quarta competência é usar IA de forma ética e responsável. Você é sempre responsável pelo resultado final — a IA é uma ferramenta, não uma desculpa.",
     subskills: [
@@ -141,8 +142,14 @@ export default function FrameworkPage() {
             >
               {/* Header do D */}
               <div className="flex items-start gap-6 mb-6">
-                <div className="flex-shrink-0">
-                  <span className="text-5xl">{d.icon}</span>
+                <div className="relative w-16 h-16 flex-shrink-0">
+                  <Image
+                    src={d.image}
+                    alt={d.fullName}
+                    fill
+                    sizes="64px"
+                    className="object-contain"
+                  />
                 </div>
                 <div>
                   <h2 className="text-guide-yellow font-bold text-2xl mb-1">

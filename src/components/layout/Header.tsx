@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const navItems = [
@@ -20,7 +21,15 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <span className="text-2xl">📖</span>
+            <div className="relative w-8 h-8">
+              <Image
+                src="/images/logo.png"
+                alt="AI Fluency"
+                fill
+                sizes="32px"
+                className="object-contain"
+              />
+            </div>
             <div className="flex flex-col">
               <span className="text-guide-yellow font-bold text-lg leading-tight group-hover:text-glow transition-all">
                 AI Fluency

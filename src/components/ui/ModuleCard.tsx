@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface ModuleCardProps {
   number: number;
@@ -6,6 +7,7 @@ interface ModuleCardProps {
   subtitle: string;
   description: string;
   icon: string;
+  image: string;
   href: string;
 }
 
@@ -14,7 +16,7 @@ export function ModuleCard({
   title,
   subtitle,
   description,
-  icon,
+  image,
   href,
 }: ModuleCardProps) {
   return (
@@ -25,7 +27,15 @@ export function ModuleCard({
           <span className="text-5xl font-bold text-guide-yellow/30 group-hover:text-guide-yellow/50 transition-colors">
             0{number}
           </span>
-          <span className="text-3xl">{icon}</span>
+          <div className="relative w-14 h-14">
+            <Image
+              src={image}
+              alt={title}
+              fill
+              sizes="56px"
+              className="object-contain"
+            />
+          </div>
         </div>
 
         {/* Título */}

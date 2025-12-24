@@ -110,6 +110,16 @@ a:hover {
   text-shadow: 0 0 10px rgba(245, 166, 35, 0.3);
 }
 
+/* Efeito vignette radial para hero */
+.bg-radial-gradient {
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    transparent 50%,
+    rgba(11, 20, 38, 0.4) 100%
+  );
+}
+
 /* Container padrão */
 .container-guide {
   max-width: 1200px;

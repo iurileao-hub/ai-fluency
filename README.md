@@ -34,28 +34,30 @@ O site roda em http://localhost:3000
 ```
 ai-fluency/
 ├── public/
-│   ├── favicon.svg       # Favicon do site
-│   ├── robots.txt        # Instruções para crawlers
-│   └── slides/           # PDFs dos slides por módulo
+│   ├── favicon.svg
+│   ├── robots.txt
+│   ├── slides/                 # PDFs dos slides por módulo
+│   └── images/                 # Assets visuais
+│       ├── hero-background.png # Background do hero
+│       ├── logo.png            # Logo da navbar
+│       ├── modules/            # Ícones dos 4 módulos
+│       │   ├── delegation.png
+│       │   ├── description.png
+│       │   ├── discernment.png
+│       │   └── diligence.png
+│       └── icons/              # Ícones diversos
+│           ├── slides.png
+│           └── dolphin.png
 ├── src/
-│   ├── app/              # Páginas (App Router)
-│   │   ├── page.tsx              # Home
-│   │   ├── error.tsx             # Página de erro
-│   │   ├── loading.tsx           # Loading state
-│   │   ├── sitemap.ts            # Sitemap dinâmico
-│   │   ├── framework/            # O Framework 4D
-│   │   ├── modulos/              # Lista e páginas individuais
-│   │   ├── vocabulario/          # Vocabulário de IA
-│   │   ├── recursos/             # Recursos adicionais
-│   │   ├── sobre/                # Sobre o curso
-│   │   └── como-funcionam-llms/  # Como funcionam LLMs
+│   ├── app/                    # Páginas (App Router)
 │   ├── components/
-│   │   ├── layout/       # Header, Footer
-│   │   └── ui/           # Componentes reutilizáveis
-│   ├── content/          # Conteúdo em TypeScript (markdown strings)
-│   └── lib/              # Utilitários
-├── next.config.ts        # Configuração Next.js + headers de segurança
-└── package.json
+│   │   ├── layout/             # Header, Footer
+│   │   └── ui/                 # Componentes reutilizáveis
+│   ├── content/                # Conteúdo em TypeScript
+│   └── lib/                    # Utilitários
+├── CLAUDE.md                   # Instruções para Claude Code
+├── DESIGN_IMPROVEMENTS.md      # Documentação de melhorias visuais
+└── next.config.ts              # Configuração + headers de segurança
 ```
 
 ## O Framework 4D
@@ -69,24 +71,30 @@ O curso ensina 4 competências essenciais para trabalhar com IA:
 | **Discernment** | Como avaliar outputs? |
 | **Diligence** | Como usar com responsabilidade? |
 
-## Tema Visual
-
-Paleta "Guia do Mochileiro das Galáxias":
-
-- `space-blue` (#0B1426) — Fundo principal
-- `nebula-blue` (#1E3A5F) — Elementos secundários
-- `guide-yellow` (#F5A623) — Cor de destaque (como a capa do Guia)
-- `star-white` (#F0F4F8) — Texto principal
-- `galaxy-purple` (#6B5B95) — Acentos
-- `towel-green` (#2ECC71) — Sucesso
-- `panic-red` (#E74C3C) — Alertas
-
 ## Módulos
 
 1. **Delegation** — O que delegar à IA?
 2. **Description** — Como comunicar com a IA?
 3. **Discernment + Diligence** — Como avaliar e usar com responsabilidade?
 4. **Síntese + Aplicação** — Como integrar tudo na prática?
+
+## Tema Visual
+
+Paleta "Guia do Mochileiro das Galáxias" com estética retro-futurista:
+
+| Cor | Hex | Uso |
+|-----|-----|-----|
+| `space-blue` | #0B1426 | Fundo principal |
+| `nebula-blue` | #1E3A5F | Elementos secundários |
+| `guide-yellow` | #F5A623 | Destaque (como a capa do Guia) |
+| `star-white` | #F0F4F8 | Texto principal |
+| `galaxy-purple` | #6B5B95 | Acentos |
+| `towel-green` | #2ECC71 | Sucesso |
+| `panic-red` | #E74C3C | Alertas |
+
+### Assets Visuais
+
+As ilustrações do site seguem a estética retro-futurista dos anos 70-80, inspirada em capas de livros de ficção científica. Foram geradas com IA (ChatGPT 5.2, Gemini) e processadas para ter fundo transparente.
 
 ## Deploy
 
@@ -96,10 +104,15 @@ O projeto está hospedado na **Vercel** com deploy automático.
 - Headers de segurança configurados
 - Sitemap dinâmico para SEO
 
+## Documentação
+
+- **CLAUDE.md** — Instruções para Claude Code trabalhar no repositório
+- **DESIGN_IMPROVEMENTS.md** — Histórico e planejamento de melhorias visuais
+
 ## Autor
 
 **Dr. Iuri Almeida** — Médico pediatra, oficial médico na PMDF, estudante de Ciência da Computação.
 
 ---
 
-*DON'T PANIC* 🐬
+*DON'T PANIC*
