@@ -184,29 +184,6 @@ export default function FrameworkPage() {
                   </div>
                 ))}
               </div>
-
-              {/* Link para módulo */}
-              <div className="mt-6 pt-4 border-t border-nebula-blue/30">
-                <Link
-                  href={`/modulos/${d.id}`}
-                  className="text-guide-yellow hover:text-guide-yellow/80 transition-colors inline-flex items-center gap-2 text-sm"
-                >
-                  <span>Ver Módulo {d.id}</span>
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </Link>
-              </div>
             </div>
           ))}
         </div>

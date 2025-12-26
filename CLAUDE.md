@@ -25,6 +25,8 @@ Site do curso **AI Fluency** — um curso de fluência em Inteligência Artifici
 | Tailwind CSS | 4.x | Usa `@theme inline` em `globals.css` |
 | TypeScript | 5.x | Strict mode |
 | react-markdown | latest | Com remark-gfm para tabelas e listas |
+| @vercel/analytics | latest | Métricas de visitantes (privacy-friendly) |
+| @vercel/speed-insights | latest | Web Vitals em produção |
 
 ---
 
@@ -260,6 +262,15 @@ O projeto está hospedado na **Vercel** com deploy automático a partir da branc
 - **URL:** <https://aifluency.vercel.app>
 - **Build:** `npm run build` (100% estático/SSG)
 - **Tempo de build:** ~2s
+
+### Analytics e Monitoramento
+
+O site utiliza ferramentas integradas da Vercel para analytics e performance:
+
+- **Vercel Analytics** (`<Analytics />`) — métricas de visitantes sem cookies
+- **Speed Insights** (`<SpeedInsights />`) — Web Vitals reais (LCP, FID, CLS)
+
+Ambos os componentes são importados no `layout.tsx` e renderizados no final do `<body>`.
 
 ---
 

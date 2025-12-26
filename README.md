@@ -13,6 +13,8 @@ Inspirado em "O Guia do Mochileiro das Galáxias" de Douglas Adams.
 - **React 19**
 - **TypeScript**
 - **react-markdown** com remark-gfm
+- **@vercel/analytics** — métricas de visitantes
+- **@vercel/speed-insights** — Web Vitals em produção
 
 ## Desenvolvimento
 
@@ -103,6 +105,8 @@ O projeto está hospedado na **Vercel** com deploy automático.
 - 100% estático (SSG)
 - Headers de segurança configurados
 - Sitemap dinâmico para SEO
+- **Vercel Analytics** — métricas de visitantes sem cookies
+- **Speed Insights** — monitoramento de Web Vitals (LCP, FID, CLS)
 
 ## Documentação
 
